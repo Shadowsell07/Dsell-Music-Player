@@ -1,40 +1,51 @@
-# WAV Media Player
+# Audio Player Component
 
-This project is a WAV media player with an interactive interface that allows users to play, pause, skip songs, and repeat tracks. 
+This repository provides a reusable audio player component built with React and TypeScript. The player features an interactive interface that allows users to play, pause, skip tracks, adjust volume, and repeat audio. The component can be easily imported and integrated into any React project.
 
 ## Features
 
-- Play and pause audio playback
-- Skip to the next track
-- Skip back to the previous track
+- Reusable React component for audio playback (supports MP3 and WAV formats)
+- Play and pause audio
+- Skip to next or previous track
 - Repeat the current track
-- Interactive buttons for user control
-
-## Project Structure
-
-- `src/`: Contains the source code for the application.
-  - `components/`: Contains UI components such as buttons and controls.
-  - `interfaces/`: Defines TypeScript interfaces for the audio player and controls.
-  - `services/`: Contains services for managing audio playback.
-  - `styles/`: Contains CSS styles for the application.
-  - `utils/`: Contains utility functions for audio processing.
-  - `app.ts`: The entry point of the application.
-  
-- `tests/`: Contains unit tests for the application components.
-
-## Installation
-
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Run `npm install` to install dependencies.
+- Volume control
+- Styled, interactive UI buttons
+- Easy integration into other projects
 
 ## Usage
 
-To start the application, run:
+1. Install dependencies:
 
-```
-npm start
-```
+   ```bash
+   npm install
+   ```
+
+2. Import and use the `AudioPlayer` component in your React project:
+
+   ```tsx
+   import { AudioPlayer } from './components/AudioPlayer';
+
+   const audioFiles = [
+     '/audio/song1.mp3',
+     '/audio/song2.mp3',
+   ];
+
+   function App() {
+     return <AudioPlayer audioFiles={audioFiles} />;
+   }
+   ```
+
+## Project Structure
+
+- `public/`
+  - `audio/`: Audio files (MP3, WAV)
+- `src/`: Source code for the media player component.
+  - `components/`: UI components including the main player.
+  - `interfaces/`: TypeScript interfaces for player and controls.
+  - `services/`: Audio playback logic.
+  - `styles/`: CSS styles.
+  - `utils/`: Utility functions.
+- `tests/`: Unit tests for components and logic.
 
 ## License
 

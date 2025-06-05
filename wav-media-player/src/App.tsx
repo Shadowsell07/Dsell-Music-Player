@@ -1,20 +1,15 @@
 import React from 'react';
-import { WavPlayer } from './components/WavPlayer';
+import { AudioPlayer } from './components/AudioPlayer';
 
-interface AppProps {
-  audioFiles: string[];
-}
-
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
   const audioFiles = [
-    '/path-to-your-wav-file-1.wav',
-    '/path-to-your-wav-file-2.wav',
-    // Add more audio files as needed
+    '/audio/116.mp3',
+    '/audio/defeat.mp3'
   ];
 
   return (
     <div>
-      <WavPlayer audioFiles={audioFiles} />
+      <AudioPlayer audioFiles={audioFiles} />
     </div>
   );
 };
